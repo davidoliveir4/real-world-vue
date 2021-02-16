@@ -1,6 +1,6 @@
 import axios from 'axios';
 const apiClient = axios.create({
-    baseURL: 'http://my-json-server.typicode.com/davidoliveir4/db',
+    baseURL: 'https://my-json-server.typicode.com/davidoliveir4/db',
     withCredentials: false,
     headers: {
       Accept: 'application/json',
@@ -13,6 +13,6 @@ export default {
         return apiClient.get('/events');
     },
     getEvent(id) {
-        return apiClient.get('/events/${ id }');
+      return apiClient.get('/events/' + id)
     }
 }
